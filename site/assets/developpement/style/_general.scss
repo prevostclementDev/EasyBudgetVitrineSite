@@ -7,9 +7,23 @@
          @include flex(row, space-between, center);
          padding: 10px;
 
+         @media screen and (max-width : 1238px) {
+          
+            flex-direction: column;
+            justify-content: center;
+            
+         }
+
          .leftPart {
 
             padding-left: 180px;
+
+            @media screen and (max-width : 1238px) {
+            
+                margin-bottom: 20px;
+                padding-left: 0;
+                
+            }
 
             img {
     
@@ -25,13 +39,27 @@
 
             padding-right: 180px;
 
+            @media screen and (max-width : 1238px) {
+            
+                padding-right: 0;
+                
+            }
+
+
             ul {
 
                 @include flex;
+                flex-wrap: wrap;
 
                 li {
 
                     margin: 0 15px;
+
+                    @media screen and (max-width : 662px) {
+                        
+                        margin: 15px;
+
+                    }
 
                     a {
 
@@ -42,6 +70,7 @@
                         font-weight: 600;
                         font-size: 18px;
                         line-height: 25px;
+                        text-align: center;
 
                         &.cta {
 
@@ -62,12 +91,28 @@
     .header-content {
 
         overflow-x: hidden;
+        height: fit-content;
+        padding: 50px;
 
         @include flex(row,space-between,center);    
+
+        @media screen and (max-width : 1238px) {
+          
+            flex-direction: column-reverse;
+            justify-content: center;
+            
+         }
 
         .rightPart {
 
             padding-left: 180px;
+
+            @media screen and (max-width : 1238px) {
+          
+                padding: 0 0 20px 0;
+
+                
+             }
 
             h1 {
 
@@ -93,10 +138,21 @@
         .leftPart {
 
             padding-right: 180px;
+            @media screen and (max-width : 1238px) {
+          
+                padding: 0;
+                
+             }
 
             img {
 
                 transform: translate(20%, 0);
+
+                @media screen and (max-width : 1238px) {
+          
+                    transform: translate(0, 0);
+                    
+                 }
 
                 &.little {
 
@@ -121,6 +177,20 @@ main {
         @include flex;
         padding: 150px 192px;
 
+        @media screen and (max-width : 1300px) {
+            
+            padding: 50px;
+
+            @media screen and (max-width : 1014px) {
+                
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+        }
+
         h2 {
 
             @include title;
@@ -141,6 +211,13 @@ main {
             max-height: 300px;
             object-fit: contain;
 
+            @media screen and (max-width : 1014px) {
+                
+                width: 100%;
+                margin-top: 30px;
+
+            }
+
         }
 
     }
@@ -151,6 +228,12 @@ main {
         @include flex(column);
         background-color: $c-blanc;
         position: relative;
+
+        @media screen and (max-width : 800px) {
+                
+            padding: 0;
+
+        }
 
         &::after {
 
@@ -183,6 +266,12 @@ main {
             z-index: 2;
             width: 80%;
 
+            @media screen and (max-width : 484px) {
+                
+                    padding: 40px 20px 40px;
+    
+            }
+
             a {
 
                 margin: 0 auto;
@@ -198,6 +287,14 @@ main {
             @include flex(row,space-between);
             margin: 80px 0 60px;
 
+            @media screen and (max-width : 1014px) {
+                
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+            }
+
             .usage {
 
                 width: calc(100% / 3 - 40px);
@@ -207,6 +304,13 @@ main {
                 box-shadow: 0px 4px 4px rgba(33, 74, 98, 0.2);
                 border-radius: 22px;
                 @include flex(column);
+
+                @media screen and (max-width : 1014px) {
+                
+                    margin: 20px 0;
+                    width: 100%;
+    
+                }
 
                 img {
 
@@ -239,11 +343,14 @@ main {
         @include flex(column);
         padding: 80px 0;
         background-color: $c-bg;
+        text-align: center;
+        
 
         h2 {
 
             @include title;
-            margin-bottom: 25px
+            margin-bottom: 25px;
+            max-width: 90%;
 
         }
 
@@ -251,6 +358,7 @@ main {
 
             @include paragraph($c-bleu);
             margin-bottom: 40px;
+            max-width: 90%;
 
         }
 
@@ -263,6 +371,19 @@ main {
         max-width: 80%;
         flex-wrap: wrap;
         margin: 0 auto;
+
+        @media screen and (max-width : 1460px) {
+                
+            flex-direction: column;
+
+            @media screen and (max-width : 842px ){
+                    
+                max-width: 95%;
+
+            }
+
+
+        }
 
         h2 {
 
@@ -284,12 +405,31 @@ main {
             box-shadow: 0px 4px 4px rgba(33, 74, 98, 0.2);
             border-radius: 21px;
 
+            @media screen and (max-width : 1460px) {
+                
+                max-width: calc(100% - 50px);
+
+                @media screen and (max-width : 842px ){
+                    
+                    flex-direction: column;
+                    justify-content: center;
+                    max-width: calc(100%);
+
+                }
+    
+            }
 
             .rightPart {
 
                 width: 70%;
                 max-width: 660px;
                 margin-left: 20px;
+
+                @media screen and (max-width : 842px ){
+                    
+                   width: 90%;
+    
+                }
 
                 h3 {
 
@@ -311,6 +451,13 @@ main {
 
                 width: 30%;
                 @include flex;
+
+                @media screen and (max-width : 842px ){
+                    
+                    width: 90%;
+                    margin-bottom: 10px;
+
+                }
 
                 img {
 
@@ -347,6 +494,18 @@ main {
             margin-bottom: 50px;
             max-width: 80%;
 
+            @media screen and (max-width : 1300px ){
+                    
+                max-width: 100%;
+
+                @media screen and (max-width : 1016px ){
+                    
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+            }
+
             .articles {
 
                 width: calc(100% / 2 - 40px);
@@ -354,9 +513,30 @@ main {
                 border-radius: 21px;
                 box-shadow: 0px 4px 4px rgba(33, 74, 98, 0.2);
 
+                @media screen and (max-width : 1016px ){
+                    
+                    margin: 15px 0;
+                    width: 80%;
+
+                    
+                @media screen and (max-width : 486px ){
+                    
+                    margin: 15px 0;
+                    width: 100%;
+
+                }
+
+                }
+
                 .bottom {
 
                     padding: 30px 50px;
+
+                    @media screen and (max-width : 486px ){
+                    
+                        padding: 20px 30px;
+    
+                    }
 
                 }
 
@@ -372,7 +552,7 @@ main {
                         width: 100%;
                         object-fit: cover;
                         border-radius: 21px 21px 0 0;
-                        max-height: 300px;
+                        height: 100%;
                         transition: ease-in-out 0.35s transform;
 
                     }
@@ -456,11 +636,31 @@ main {
             border-radius: 12px;
             z-index: 1;
             background-color: white;
+
+            @media screen and (max-width : 1267px ){
+                    
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+
+               @media screen and (max-width : 521px ){
+                    
+                width: 90%;
+                 
+             }
+                
+            }
     
             .part {
     
                 width: 50%;
                 padding: 20px;
+
+                @media screen and (max-width : 1267px ){
+                    
+                   width: 100%;;
+                     
+                 }
     
                 h3 {
     
@@ -495,6 +695,16 @@ main {
                         right: 0;
                         top: 50%;
                         transform: translate(0, -50%);
+
+                        @media screen and (max-width : 1267px ){
+                    
+                            right: 100%;
+                            top: 100%;
+                            width: 80%;
+                            height: 1px;
+                            transform: translate(110%, 0);
+                             
+                         }
     
                     }
     
@@ -507,9 +717,15 @@ main {
                         li {
     
                             @include flex;
-    
+                            
                             margin: 20px 0;
     
+                            @media screen and (max-width : 869px ){
+                    
+                                flex-wrap: wrap;
+                                  
+                            }
+
                             p {
     
                                 margin-bottom: 0;
@@ -534,6 +750,12 @@ main {
         width: 100%;
         position: relative;
         padding: 80px 180px;
+
+        @media screen and (max-width : 1135px) {
+        
+            display: none;
+
+        }
 
         @include flex(row,center,flex-end);
         flex-wrap: wrap;
@@ -635,9 +857,24 @@ main {
     background-color: $c-blanc;
     box-shadow: 0px -4px 30px rgba(229, 242, 240, 0.5);
 
+    @media screen and (max-width : 1057px) {
+        
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 20px 0;
+
+    }
+
     .leftPart {
 
         padding-left: 180px;
+
+        @media screen and (max-width : 1057px) {
+        
+            padding: 0;
+    
+        }
 
         img {
 
@@ -653,13 +890,32 @@ main {
 
             padding-right: 180px;
 
+            @media screen and (max-width : 1057px) {
+        
+                padding: 0;
+        
+            }
+    
+
             ul {
 
                 @include flex;
 
+                @media screen and (max-width : 1057px) {
+        
+                    flex-wrap: wrap;
+            
+                }
+
                 li {
 
                     margin: 0 15px;
+
+                    @media screen and (max-width : 623px) {
+        
+                        margin: 20px 10px;
+                
+                    }
 
                     a {
 

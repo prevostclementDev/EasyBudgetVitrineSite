@@ -20,9 +20,10 @@ $f-merriweather : 'Merriweather Sans', sans-serif;
   font-family: $f-merriweather;
   font-style: normal;
   font-weight: 800;
-  font-size: 64px;
-  line-height: 80px;
+  font-size: clamp(30px,4vw,64px);
+  line-height: 120%;
   color: $c-bleu;
+  
 
 }
 
@@ -31,8 +32,8 @@ $f-merriweather : 'Merriweather Sans', sans-serif;
   font-family: $f-merriweather;
   font-style: normal;
   font-weight: 800;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: clamp(20px,2.9vw,48px);
+  line-height: 120%;
   color: $color;
 
 }
