@@ -1,0 +1,99 @@
+$c-bleu : #2D6585;
+$c-bg : #E5F2F0;
+$c-bleu-2 : #BACCD7;
+$c-blanc : #ffffff;
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+$f-lexend : 'Lexend', sans-serif;
+$f-merriweather : 'Merriweather Sans', sans-serif;
+
+@mixin flex($direction : row, $justify : center, $align : center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin header-title() {
+
+  font-family: $f-merriweather;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 80px;
+  color: $c-bleu;
+
+}
+
+@mixin title($color : $c-bleu) {
+
+  font-family: $f-merriweather;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 60px;
+  color: $color;
+
+}
+
+@mixin paragraph($color : $c-blanc){
+  font-family: $f-merriweather;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: $f-merriweather;
+    scroll-behavior: smooth;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .cta {
+
+      padding: 9px 23px;
+      color: $c-bleu;
+      background-color: $c-blanc;
+      cursor: pointer ;
+      font-family: $f-lexend;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      border-radius: 10px;
+      transition: ease-in-out 0.3s all;
+      outline: none;
+      border: none;
+      text-decoration: none;
+
+      &.bleu {
+
+        background-color: $c-bleu;
+        color: $c-blanc!important;
+
+      }
+
+  }
